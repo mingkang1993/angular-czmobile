@@ -1,6 +1,6 @@
 # angular-czmobile
 内置了
-  form校验，调用方法跟jquery-formValidate 一样，基于angular 自带的form校验扩展，由于angular自带的form，每次都要写template错误信息模版，到最后页面上会有一对的错误信息模版。
+  form校验，调用方法跟jquery-formValidate 一样，基于angular 自带的form校验扩展，由于angular自带的form，每次都要写template错误信息模版，到最后页面上会有一堆的错误信息模版，最重要的是一开始就出来错误信息，体验不好。
   
   history重写了浏览器的历史纪录，由于浏览器的历史纪录回退的时候判断他的length略坑，导致会离开当前的网页，而且来回切换的话超过25次就会死循环，所以本人重写了回退，里面包括权限的校验。
   
