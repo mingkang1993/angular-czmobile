@@ -77,12 +77,14 @@
                     matchRule(rule);
                 }
             };
-        }
+        }//validateName,callback
 
         function validateFns(scope,attrs,controllers){
             return {
-                addRule : function(validateName,callback){
-                    rule[validateName] = callback;
+                addRule : function(validateMethod){
+                    for(var validateName in validateMethod){
+                        rule[validateName] = validateMethod[validateName];
+                    }
                 },
                 run : function(elm){
                     var provideFn = provide(scope,elm,attrs,controllers);
@@ -93,9 +95,7 @@
 
         return validateFns;
     }]).run(['validateFactory',function(validateFactory){
-        angular.validateAddMethod = function(validateName,callback){
-            validateFactory().addRule(validateName,callback);
-        };
+        validateFactory().addRule(angular.validateAddMethod);
     }]).directive('formSubmit', function() {
         return {
             restrict : 'EA',

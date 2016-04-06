@@ -5,25 +5,22 @@
  */
 
 ;(function(angular){
-    window.onload = function(){
-        angular.validateAddMethod('phone',function(newVal){  //验证手机
+    angular.validateAddMethod = {
+        phone : function(newVal){  //验证手机
             var res = new RegExp(/^1[3578][0-9]{9}$/);
             return newVal && res.test(newVal);
-        });
-
-        angular.validateAddMethod('number',function(newVal){ //验证是否数字
+        },
+        number : function(newVal){ //验证是否数字
             var res = new RegExp(/^[0-9]*$/);
             return newVal && res.test(newVal);
-        });
-
-        angular.validateAddMethod('equalTo',function(newVal,$elm){ //两端绑定
+        },
+        equalTo : function(newVal,$elm){ //两端绑定
             var tarElm = function(){
                 var id = $elm.attr('equal-to');
                 return document.getElementById(id);
             }();
             return tarElm.value == newVal;
-        });
-
+        }
     };
 })(angular);
 

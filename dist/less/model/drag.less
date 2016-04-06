@@ -1,0 +1,70 @@
+
+
+.drag-to-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: none;
+}
+
+.drag-to-dismiss {
+  position: absolute;
+  right: -999px;
+  top: 0;
+  z-index: 9999;
+  text-align: right;
+}
+
+.drag-to-dismiss a {
+  display: inline-block;
+  width: 4rem;
+  height: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.drag-to-dismiss a.success {
+  background: rgb(229, 0, 57);
+  color: #fff;
+}
+
+.drag-list li {
+  position: relative;
+  z-index: 22;
+}
+
+.drag-list li.drag-active {
+  z-index: 99999;
+}
+
+.drag-list li.drag-active .drag-to-bg {
+  display: block;
+}
+
+.message-list li.drag-active .drag-to-dismiss {
+  width: 100%;
+  height: 100%;
+}
+
+.drag-buttons {
+  position: relative;
+  z-index: 999;
+  display: inline-block;
+}
+
+.drag-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  //display: none;
+}
+
+.drag-bg.drag-show {
+  display: block;
+}

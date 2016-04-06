@@ -1,0 +1,202 @@
+/**
+ * Created by chenmingkang on 16/3/28.
+ */
+/*返回顶部*/
+.back-top {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  z-index: 99999;
+  text-align: center;
+  display: none;
+}
+.back-top-bj {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.3);
+  border-radius: 50%;
+}
+.back-top i {
+  color: #fff;
+  position: relative;
+  z-index: 999;
+  display: inline-block;
+}
+.back-bottom {
+  bottom: 1rem;
+}
+.back-top-show {
+  display: block;
+}
+/**
+ * Created by chenmingkang on 16/3/28.
+ */
+/*弹出框公用*/
+.confirm-lay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+}
+.confirm-lay .confirm {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  height: 100%;
+}
+.confirm-lay .confirm .confirm-bg {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.confirm-lay .confirm .confirm-main {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -2.7rem 0 0 -6.7rem;
+  background: #fff;
+  width: 13.4rem;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+}
+.confirm-lay .confirm .confirm-text {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #000;
+  padding: 0.5rem;
+}
+.confirm-lay .confirm .confirm-text-title {
+  font-size: 0.85rem;
+  line-height: 0.85rem;
+  margin-bottom: .5rem;
+}
+.confirm-lay .confirm .confirm-btn {
+  line-height: 2.3rem;
+  text-align: center;
+}
+.confirm-lay .confirm .confirm-btn a {
+  font-size: 0.75rem;
+  border-top: 1px solid #d9d9d9;
+  text-align: center;
+  display: inline-block;
+  width: 49%;
+  color: #ff6699;
+  box-sizing: border-box;
+}
+.confirm-lay .confirm .confirm-btn a:nth-of-type(2) {
+  border-left: 1px solid #d9d9d9;
+}
+.confirm-lay-show {
+  display: block;
+}
+.drag-to-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: none;
+}
+.drag-to-dismiss {
+  position: absolute;
+  right: -999px;
+  top: 0;
+  z-index: 9999;
+  text-align: right;
+}
+.drag-to-dismiss a {
+  display: inline-block;
+  width: 4rem;
+  height: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.drag-to-dismiss a.success {
+  background: #e50039;
+  color: #fff;
+}
+.drag-list li {
+  position: relative;
+  z-index: 22;
+}
+.drag-list li.drag-active {
+  z-index: 99999;
+}
+.drag-list li.drag-active .drag-to-bg {
+  display: block;
+}
+.message-list li.drag-active .drag-to-dismiss {
+  width: 100%;
+  height: 100%;
+}
+.drag-buttons {
+  position: relative;
+  z-index: 999;
+  display: inline-block;
+}
+.drag-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+.drag-bg.drag-show {
+  display: block;
+}
+/**
+ * Created by chenmingkang on 16/3/28.
+ */
+/*信息提示公用*/
+.message-top {
+  position: fixed;
+  top: 1.25rem;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.message-top .message-text {
+  color: #fff;
+  position: relative;
+  z-index: 9999;
+}
+.message-top .message-main-lay {
+  max-width: 16rem;
+  padding: 0 0.25rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+.message-top .message-main {
+  position: relative;
+  padding: 0.25rem 0;
+}
+.message-top .message-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.6;
+  border-radius: 4px;
+}
+.message-show {
+  display: block;
+}
